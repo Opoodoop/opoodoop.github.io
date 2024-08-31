@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(27, 27, 27);
+}
+
+.everything {
+    margin: 0 25%;
+}
+
+.title, button {
+    border-radius: 20px;
+    border: 2px solid hotpink;
+}
+
+.title, button, a {
+    color: hotpink;
+    font-family: "Comic Sans MS";
+    margin: 15px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+button {
+    height: 250px;
+    font-size: 50px;
+    background-color: transparent;
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}

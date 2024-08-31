@@ -1,0 +1,16 @@
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.infinite-grid {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background-image: url("https://opoodoop.github.io/infinity/chip.gif");
+	background-size: 50px 50px;
+}

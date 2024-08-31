@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    height: 100%;
+    overflow-y: hidden;
+
+}
+.title {
+    text-align: center;
+    -webkit-animation:title 10s infinite;
+}
+.chip {
+    align-self: center;
+    width: 50%;
+    margin-left: 25%;
+}
+.footer {
+    color:white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.audio {
+    bottom:0;
+    position: fixed;
+    right: 0;
+}
+
+@-webkit-keyframes title {
+    0% {color: white;}
+    25% {color: red;}
+    50% {color: lime;}
+    75% {color: blue;}
+    100% {color: white;}
+}
+.counter {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Comic Sans MS;
+}
+a {
+    font-size: 30px;
+    color: black;
+    text-decoration: none; 
+}
