@@ -1,0 +1,27 @@
+body {
+    font-family: "Comic Sans MS";
+    background-image: url(/images/background.jpg);
+}
+
+img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.box {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding: 1%;
+    border-radius: 50px;
+    margin: 5% 25%;
+}
+
+.centered {
+    text-align: center;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
