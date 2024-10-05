@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(images/Background.jpg);
+}
+.container {
+    text-align: center;
+}
+#counter {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: lime;
+    font-family: Comic Sans MS;
+}
+    #counter::before{
+    content: 'Meekocoin: ';
+}
+#incrementBtn {
+    font-size: 72px;
+    padding: 100px 200px;
+    cursor: pointer;
+    font-family: Comic Sans MS;
+    background-image: url(images/Button.jpg);
+    background-size: 100%;
+    border-radius: 25px;
+}
+#credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    margin: 0;
+}
+a {
+    color: white;
+}
