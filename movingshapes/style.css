@@ -1,0 +1,60 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #272727;
+}
+
+#circle {
+    border-radius: 50%;
+    background-color: lime;
+    translate: -100px 100px;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+}
+
+#red{
+    background-color: red;
+    position: absolute;
+    animation: wee 1s infinite;
+}
+
+#blue {
+    position: relative;
+    background-color: blue;
+    top: -100px;
+    left: 100px;
+    z-index: -1;
+}
+
+@keyframes wee {
+    0%{top: 0px; left: 100px;}
+    25%{top: 0px; left: calc(100vw - 300px);}
+    50%{top: calc(100vh - 300px); left: calc(100vw - 300px);}
+    75%{top: calc(100vh - 300px); left: 100px;}
+    100%{top: 0px; left: 100px;}
+}
+.rainbow_text_animated {
+    text-align: center;
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background-clip: text;
+    color: transparent;
+    font-size: 5em;
+    font-family: 'Comic Sans MS';
+    animation: rainbow_animation 1s ease-in-out infinite;
+    background-size: 400% 100%;
+    margin-top: calc((100vh - 111px)/2);
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
