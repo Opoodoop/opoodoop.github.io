@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('font.ttf') format('truetype');
+    }
+
+    .unicode-display {
+      font-family: 'CustomFont', monospace;
+      font-size: 48px;
+      text-align: center;
+      padding: 40px;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+      color: white
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .unicode-display::after {
+      content: "\E052";
+      animation: cycleUnicode 3s steps(116) infinite;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #222222;
+    }
+
+    .container {
+      background: black;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+  </style>
+  <style id="keyframes"></style>
+</head>
+<body>
+  <div class="container">
+    <div class="unicode-display"></div>
+  </div>
+
+  <script>
+    function generateKeyframes() {
+      const start = parseInt('E052', 16);
+      const end = parseInt('E0C6', 16);
+      const totalChars = end - start + 1;
+      
+      let keyframes = '@keyframes cycleUnicode {\n';
+      
+      for (let i = 0; i <= totalChars - 1; i++) {
+        const percentage = (i / (totalChars - 1) * 100).toFixed(3);
+        const unicode = (start + i).toString(16).toUpperCase();
+        keyframes += `  ${percentage}% {\n    content: "\\${unicode}";\n  }\n`;
+      }
+      
+      keyframes += '}';
+      
+      document.getElementById('keyframes').textContent = keyframes;
+    }
+
+    // Wait for font to load before showing content
+    document.fonts.ready.then(() => {
+      generateKeyframes();
+    }).catch(error => {
+      console.error('Font failed to load:', error);
+      // Generate keyframes anyway as fallback
+      generateKeyframes();
+    });
+  </script>
+</body>
+</html>
